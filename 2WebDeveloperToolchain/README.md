@@ -1,16 +1,16 @@
 # Web Developer Toolchain - Step by Step
 
 ## Overview
-1. Setup project with npm (Package management tool)
-2. Create static assets with Webpack (Project Bundler)
-3. Production build with Webpack
-4. Integrate Babel in project (Transpilation tool for advanced browser support)
-5. Integrate ESLint with Webpack and Babel 
+1. [Setup project with npm (Package management tool)](#npm_setup)
+2. [Create static assets with Webpack (Project Bundler)](#webpack)
+3. [Production build with Webpack](#webpack_prod)
+4. [Integrate Babel in project (Transpilation tool for advanced browser support)](#babel)
+5. [Integrate ESLint with Webpack and Babel](#eslint)
 ## Prerequisites
 - Download and install [Node.js](https://nodejs.org/)
 - Install IDE of you choice (eg. [VS Code](https://code.visualstudio.com/download))
 
-## 1. Setup project with npm
+## <a name="npm_setup">1. Setup project with npm</a>
 Create a new Javascript application by creating a folder with your desired <project-name> to store all of the application source code. Navigate inside the folder and open the command line tool (for Windows Shift + right click -> “Powershell-Fenster hier öffnen”).
 
 ```shell
@@ -109,6 +109,7 @@ Now we can start the application by only calling `npm start` in the command line
 - Makes it easier for you to manage and switch versions.
 
 ## <a name="webpack">2. Create static assets with Webpack (Project Bundler)</a> 
+
 [Webpack](https://webpack.js.org/) is a Javascript bundler for web applications. In the past, you had to link Javascript files
 manually in HTML files. With Webpack all dependencies and Javascript files are converted into static
 assets and added to the HTML file.
@@ -145,7 +146,7 @@ However, this may become a tedious task over time, because you have to keep trac
 <script src="../src/myscript3.js"></script>
 ...
 -->
-<script src=".bundle.js"></script>
+<script src="bundle.js"></script>
 ```
 
 ### Install Webpack in project
@@ -161,3 +162,97 @@ application for production.
 
 > <a name="proddependencies">Production build dependencies</a>: Only the dependencies for running the source code are needed as production ready
 dependencies. They can be installed without the `--save-dev flag`.
+
+Your `package.json` should look like this:
+![Package.json](https://github.com/leonardo1710/WebEngineeringSDE/blob/main/2WebDeveloperToolchain/images/packagejson_dev_dependencies.PNG)
+
+Change the npm scripts section inside `package.json` to start the project with webpack server:
+``` json
+"scripts": {
+    "start": "webpack serve --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+``` 
+
+Run `npm start` in your command line to start the Webpack Development Server. To see the output,
+navigate to your `dist/index.html` and open it in a browser. The browser DevTools indicate that the
+bundle.js file cannot be found. That's because we didn't tell Webpack yet to generate it for us. 
+
+Next, let's
+see how we can bundle our source code files from the `/src` folder into the `/dist` folder with Webpack.
+
+> Note: to stop the Webpack Development Server you have to press CTRL + C two times
+
+Therefore, add the following addition to your `npm start` script in your `package.json` file:
+
+```json
+"scripts": {
+    "start": "webpack serve --config ./webpack.config.js --mode development",
+    ...
+},
+```
+
+The script defines that you want to use the Webpack Dev Server with a configuration file called
+`webpack.config.js`. Create the required webpack.config.js file in your project's root directory and add the
+following code to it:
+``` javascript
+module.exports = {
+  // 1
+  // Use the src/index.js file as entry point to bundle it.
+  // If the src/index.js file imports other JS files,
+  // bundle them as well
+  entry: './src/index.js',
+  // 2
+  // The bundles source code files shall result in a bundle.js file
+  // in the /dist folder
+  output: {
+    path: '/dist',
+    filename: 'bundle.js'
+  },
+  // 3
+  // The /dist folder will be used to serve our application
+  // to the browser
+  devServer: {
+    static: './dist'
+  }
+};
+```
+Furthermore, we can resolve the paths so that they work across operating systems:
+
+``` javascript
+const path = require('path');
+
+module.exports = {
+  // 1
+  // Use the src/index.js file as entry point to bundle it.
+  // If the src/index.js file imports other JS files,
+  // bundle them as well
+  entry: path.resolve(__dirname, './src/index.js'),
+  // 2
+  // The bundles source code files shall result in a bundle.js file
+  // in the /dist folder
+  output: {
+    path: path.resolve(__dirname, '/dist'),
+    filename: 'bundle.js'
+  },
+  // 3
+  // The /dist folder will be used to serve our application
+  // to the browser
+  devServer: {
+    static: path.resolve(__dirname, './dist'),
+  }
+};
+```
+
+Now we can start the Development Server again. After running npm start, we get a URL where the application is running in the command line (eg: Project is running at http://localhost:8080/). If you open
+the URL in the browser, you should see the console.log() from the index.js file inside the DevTools Console.
+
+Success! We integrated Webpack to our npm project and defined a correct setup for bundling our project
+assets. You are now able to import other packages or script files into your index.js. They will be all
+bundled into your bundle.js file through Webpack.
+
+## <a name="webpack_prod">3. Production Build with Webpack</a>
+
+## <a name="babel">4. Integrate Babel</a>
+
+## <a name="eslint">5. Integrate ESLint</a>
