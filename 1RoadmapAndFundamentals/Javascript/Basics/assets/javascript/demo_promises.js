@@ -1,8 +1,5 @@
 
 
-
-
-
 var myPromise = new Promise(function(resolve, reject) {
     // do a thing, possibly async, then…
     let x = false;
@@ -39,4 +36,18 @@ myPromise2.then(function(result){
 }).catch(function(error){
     console.log(error);
 });
+
+
+// Async Await
+async function f() {
+    try {
+      let response = await myPromise2;  // wait here until myPromise2 has settled
+      console.log('response :>> ', response);
+    } catch(err) {
+      console.error(err);
+    }
+}
+  
+f();
+
 
