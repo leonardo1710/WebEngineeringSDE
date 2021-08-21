@@ -37,6 +37,6 @@ code .
 
 Now, since we have used npm to initialize it, our project should have a package.json file, which should be filled with defaults.
 
-![Package.json](https://github.com/leonardo1710/WebEngineeringSDE/blob/main/2WebDeveloperToolchain/images/packagejson1.png)
+![Package.json](https://github.com/leonardo1710/WebEngineeringSDE/blob/main/2WebDeveloperToolchain/images/packagejson1.PNG)
 
 
