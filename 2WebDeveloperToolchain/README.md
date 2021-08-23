@@ -6,6 +6,7 @@
 3. [Production build with Webpack](#webpack_prod)
 4. [Integrate Babel in project (Transpilation tool for advanced browser support)](#babel)
 5. [Integrate ESLint with Webpack and Babel](#eslint)
+6. [SASS with Webpack and Babel](#sass)
 ## Prerequisites
 - Download and install [Node.js](https://nodejs.org/)
 - Install IDE of your choice (eg. [VS Code](https://code.visualstudio.com/download))
@@ -472,3 +473,113 @@ Inside the `webpack.config.js` (or if you separated them into `webpack.dev.js` a
 You have integrated Babel successfully! Try to run your application in IE and you will get no syntax error anymore (don't forget to delete your IE cache).
 
 ## <a name="eslint">5. Integrate ESLint</a>
+[ESLint](https://eslint.org/) helps you to set up rules and to enforce code style across your code base. 
+
+Install ESLint:
+``` shell
+npm install eslint
+```
+
+Since the project uses Webpack, you have to tell Webpack that you want to use ESLint in your build process. Therefore you can install eslint-loader on the command line to your project's dependencies from your project's root folder:
+``` shell
+npm install --save-dev eslint-loader
+npm install --save-dev babel-eslint
+```
+
+Next, you can use the Webpack Loader for ESLint in your `webpack.config.js` files:
+
+``` javascript
+{
+  ...
+  module: {
+    // configuration regarding modules
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/, // files to exclude
+        use: ['babel-loader', 'eslint-loader']
+      }
+    ]
+  },
+}
+```
+
+Now we have to define a configuration for ESLint. For that create a `.eslintrc` file in root directory of the project.
+
+``` json
+// inside .eslintrc
+{
+  "parser": "babel-eslint",
+  "rules": {}
+}
+```
+
+Now you can define your own linting rules for your project ([ESLint rules](https://eslint.org/docs/rules/)). 
+You can also define a sharable ESLint configuration, for example [Airbnb lint configuration](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) which is based on [Airbnb's Stye Guide](https://github.com/airbnb/javascript).
+
+To do so, you have to install it with npm:
+``` shell
+npx install-peerdeps --dev eslint-config-airbnb
+```
+And extend your `.eslintrc`:
+``` json
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-console": "off" // to disable warnings when logging to console
+  }
+}
+```
+
+When you try to run your project with `npm start` you probably will see some error or warning messages (based on your linting rules). If you installed the ESLint extension in VSCode, you should see linting errors in your editor (don't forget to restart VSCode after installation).
+
+## <a name="sass">6. SASS with Webpack and Babel</a>
+Sass is an extension (pre-processor) to CSS which will be converted to CSS during build time. To use Sass in our Webpack project we need to install it via npm and install all necessary loaders (just like with eslint or babel):
+
+``` shell
+npm install sass
+npm install sass-loader css-loader style-loader node-sass
+```
+Furthermore, we need to tell our webpack configuration that it has to load sass codes and especially how to load it, by defining rules:
+``` javascript
+// inside webpack.config.js - webpack.dev.js or webpack.prod.js
+module: {
+    // configuration regarding modules
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/, // files to exclude
+        use: ['babel-loader', 'eslint-loader'],
+      },
+      // CSS and SASS
+      {
+        test: /\.(scss|css)$/,  // load files that end with scss and css
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+
+```
+
+To test the webpack setup just create a Sass file inside your directory and import it in index.js. Inside `/src/styles/style.scss`: 
+
+``` Sass
+$body-color: red;
+
+body {
+  color: $body-color;
+}
+```
+
+Inside `/src/index.js`:
+``` javascript
+import './styles/style.scss';
+
+console.log('Hello npm project!');
+```
+The SCSS to CSS conversion should work now. Run your development server to see if it works.

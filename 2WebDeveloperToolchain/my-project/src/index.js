@@ -1,5 +1,5 @@
-console.log("Hello npm project!");
+import './styles/style.scss';
 
-const hello = () => console.log("hello world!");
-
+console.log('Hello npm project!');
+const hello = () => console.log('hello world!');
 hello();

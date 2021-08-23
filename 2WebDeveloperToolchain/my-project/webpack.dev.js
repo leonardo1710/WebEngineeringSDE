@@ -14,7 +14,7 @@ module.exports = {
   // in the /dist folder
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   // 3
   // The /dist folder will be used to serve our application
@@ -25,13 +25,13 @@ module.exports = {
   // 4
   // Add plugins for webpack here
   plugins: [
-    new CleanWebpackPlugin,
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Basic Webpack Setup",
+      title: 'Basic Webpack Setup',
       template: path.resolve(__dirname, './src/index.html'),
-    })
+    }),
   ],
-  // 5 
+  // 5
   // Integrate Babel in the build process
   // Define which files to use the loader
   module: {
@@ -40,12 +40,21 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/, // files to exclude
-        use: ['babel-loader']
-      }
-    ]
+        use: ['babel-loader', 'eslint-loader'],
+      },
+      // CSS and SASS
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
   },
   resolve: {
     // options for resolving module requests
-    extensions: ['*', '.js']  // files to load
-  }
+    extensions: ['*', '.js'], // files to load
+  },
 };
