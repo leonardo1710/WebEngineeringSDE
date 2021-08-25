@@ -7,6 +7,7 @@
 4. [Integrate Babel in project (Transpilation tool for advanced browser support)](#babel)
 5. [Integrate ESLint with Webpack and Babel](#eslint)
 6. [SASS with Webpack and Babel](#sass)
+
 ## Prerequisites
 - Download and install [Node.js](https://nodejs.org/)
 - Install IDE of your choice (eg. [VS Code](https://code.visualstudio.com/download))
