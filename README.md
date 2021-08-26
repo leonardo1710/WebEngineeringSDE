@@ -10,7 +10,7 @@ This repository provides demo applications and course material presented in the 
 6. [Web Trends](#trends)
 7. [Web Security](#security)
 
-## <a name="fundamentals" href="https://github.com/leonardo1710/WebEngineeringSDE/tree/main/1RoadmapAndFundamentals">1. Roadmap, Fundamentals and Advanced Javascript</a>
+## <a name="fundamentals">1. Roadmap, Fundamentals and Advanced Javascript</a>
 ### Topics
 * [Web Developer Roadmap 2021](https://github.com/kamranahmedse/developer-roadmap)
 * HTML/CSS Recap
