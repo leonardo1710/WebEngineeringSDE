@@ -30,29 +30,34 @@ function greetUser(){
  *******/
 
     function greetInEnglish(){
-        console.log("Hello " + firstName);  
+        console.log("Hello " + firstName);  // 
     }
 
     function greetInSpanish(){
-        console.log("Hola " + firstName);   
+        console.log("Hola " + firstName);   //
     }
 
     var firstName = "John";
+    // this works because firstName was hoisted
     greetInEnglish();
     greetInSpanish();
 
     
 
+
+
+
     function greetInEnglish2(){
-        console.log("Hello " + name);
-        var name ="Jane";
+        // var == undefined
+        console.log("Hello " + name);   // undefined
+        let name ="Polo";
         greetInSpanish2();
     }
 
     function greetInSpanish2(){
-        console.log("Hola " + name); 
+        console.log("Hola " + name); // marco
     }
 
-    var name = "John";
+    var name = "Marco";
     greetInEnglish2();
  

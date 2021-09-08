@@ -14,6 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
+    clean: true,
   },
   // 3
   // The /dist folder will be used to serve our application
@@ -39,12 +40,26 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/, // files to exclude
-        use: ['babel-loader'],
+        use: ['babel-loader', 'eslint-loader'],
+      },
+      // CSS and SASS
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      { // define typescript loader and file extensions
+        test: /\.tsx?/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
   },
   resolve: {
     // options for resolving module requests
-    extensions: ['*', '.js'], // files to load
+    extensions: ['*', '.js', '.ts'], // files to load
   },
 };
