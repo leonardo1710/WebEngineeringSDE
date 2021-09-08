@@ -1,7 +1,7 @@
 import './styles/style.scss'; // import scss styles
 import sayHelloWorld from './scripts/hello';
 import { hello as printHello, goodbye } from './scripts/greeting';
-import { hello as helloFromTs } from './scripts/greeting.ts'; // the .ts extension is necessary here because of naming collision with greeting.js file
+import { hello as helloFromTs, printMessage } from './scripts/greeting.ts'; // the .ts extension is necessary here because of naming collision with greeting.js file
 
 console.log('Hello npm project!');
 const hello = () => console.log('Hello World from index.js!');
@@ -16,3 +16,5 @@ goodbye();
 
 // call function from .ts file
 helloFromTs();
+
+printMessage('Hello TS function', 2);
