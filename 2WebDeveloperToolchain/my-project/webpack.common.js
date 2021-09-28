@@ -62,4 +62,5 @@ module.exports = {
     // options for resolving module requests
     extensions: ['*', '.js', '.ts'], // files to load
   },
+  target: 'web',
 };

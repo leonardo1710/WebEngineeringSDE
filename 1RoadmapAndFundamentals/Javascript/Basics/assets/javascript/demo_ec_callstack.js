@@ -28,13 +28,12 @@ function greetUser(){
  * Scope Chain
  * 
  *******/
-
     function greetInEnglish(){
-        console.log("Hello " + firstName);  // 
+        console.log("Hello " + firstName);  // null/undef
     }
 
     function greetInSpanish(){
-        console.log("Hola " + firstName);   //
+        console.log("Hola " + firstName);   // null
     }
 
     var firstName = "John";
@@ -42,20 +41,17 @@ function greetUser(){
     greetInEnglish();
     greetInSpanish();
 
-    
-
-
 
 
     function greetInEnglish2(){
-        // var == undefined
+        // name = undefined;
         console.log("Hello " + name);   // undefined
-        let name ="Polo";
+        var name ="Polo";
         greetInSpanish2();
     }
 
     function greetInSpanish2(){
-        console.log("Hola " + name); // marco
+        console.log("Hola " + name); // undefined
     }
 
     var name = "Marco";
