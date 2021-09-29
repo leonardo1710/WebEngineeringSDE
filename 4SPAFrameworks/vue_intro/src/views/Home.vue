@@ -15,7 +15,7 @@
             </b-row>
             
             <!-- Use a Component with props -->
-            <Timer :time-left="timeLeft" />
+            <Timer :hrs-min-secs="hoursMinSecs" />
 
             <!-- TODO make a component -->
             <b-row class="mt-4">
@@ -30,10 +30,11 @@
                 </div>
             </b-row>
             
+            <!-- Use a Component with props -->
             <Loader :loading="loading"></Loader>
     
           </div>
-        </div>
+      </div>
     </b-row>
     <div class="bg-custom"></div>
   </b-container>
@@ -53,26 +54,12 @@ export default {
   },
   data() {
     return {
-      timerInterval: null,
-      timePassed: 0,
-      hours: 2,
+      hoursMinSecs: {hours: 0, minutes: 1, seconds: 10},
       loading: true,
       teams: []
     }
   },
-  computed: {
-    timeLeft() {
-      return this.timeLimit - this.timePassed
-    },
-    timeLimit(){
-      return this.hours*60*60;
-    }
-  },
   methods: {
-    startTimer() {
-      this.timerInterval = setInterval(() => (this.timePassed += 1), 1000);
-    },
-
     async getLeaderboard(){
       this.teams = await getAllTeams();
       this.sortTeams(this.teams);
@@ -80,7 +67,6 @@ export default {
     },
 
     sortTeams(teams){
-      console.log('teams :>> ', teams);
       teams.sort((a, b) => {
         return a.progress - b.progress;
       });
@@ -88,8 +74,6 @@ export default {
   },
 
   mounted() {
-    this.startTimer();
-
     try{
       this.getLeaderboard();
     } catch(err){

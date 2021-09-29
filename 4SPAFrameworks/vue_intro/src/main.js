@@ -9,8 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import './assets/styles/style.scss';
-import './assets/styles/leaderboard.scss';
-import './assets/styles/clock.scss';
+import './assets/styles/leaderboard.scss';  // TODO move to component
 
 
 Vue.config.productionTip = false
