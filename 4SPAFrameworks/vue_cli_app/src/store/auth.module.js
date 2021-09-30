@@ -27,9 +27,15 @@ const actions = {
               }
           })
           .catch(response =>{
-            console.log(response);
-            context.commit("setError", response.data.errors);
-            reject(response.data.errors);
+            let error = "Some error occurred.";
+            if(response.error){
+              error = response.error;
+              context.commit("setError", error);
+            } else {
+              context.commit("setError", error)
+            }
+            
+            reject(error);
           })
     });
   },

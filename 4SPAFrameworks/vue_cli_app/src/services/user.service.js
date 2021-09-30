@@ -5,7 +5,8 @@ import { CONFIG } from "@/common/config";
 export const userService = {
   register,
   getAll,
-  login
+  login,
+  logout
 };
 
 function register(user){
