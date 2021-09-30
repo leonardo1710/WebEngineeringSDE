@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mb-6 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-6 {
+  margin-top: 2.5rem;
+}
+
+/*-----Background-----*/
+.bg-custom{
+  position: fixed; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c771987e-4043-4389-b795-ea8499aec998/dd70uhm-e1678542-66de-4ae7-b8df-d321002fadc3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M3NzE5ODdlLTQwNDMtNDM4OS1iNzk1LWVhODQ5OWFlYzk5OFwvZGQ3MHVobS1lMTY3ODU0Mi02NmRlLTRhZTctYjhkZi1kMzIxMDAyZmFkYzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uu9RtPm_bQUHzJaHKrDhokk9ySLgn_qKoNQcS-ocsJU') center no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  opacity: .5;
+}
