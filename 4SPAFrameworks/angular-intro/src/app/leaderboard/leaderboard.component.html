@@ -1,1 +1,9 @@
-<p>leaderboard works!</p>
+<div class="leaderboard-table pt-2">
+  <h2 class="text-white mb-2">Leaderboard</h2>
+  <ol>
+    <li *ngFor="let team of teams">
+      <mark>{{ team.team }}</mark>
+      <img src="http://www.rewards1.com/uploads/avatar/203.jpg" />
+    </li>
+  </ol>
+</div>

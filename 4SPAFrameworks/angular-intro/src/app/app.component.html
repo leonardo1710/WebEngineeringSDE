@@ -6,31 +6,19 @@
   
 
       <div class="leaderboard-inner">
-        <div class="row">
-          <span class="title">Programming Escape Room</span>
-        </div>
-        <div class="row">
-          <span class="subtitle">FH Campus Wien</span>
-        </div>
+        <p class="title mt-6">Programming Escape Room</p>
+
+        <p class="subtitle mt-6">FH Campus Wien</p>
         
-        <div id="timer" class="row mt-6 mb-6">
-        </div>
+        <app-timer-component id="timer" [hrsMinSec]="hrsMinSec" class="row mt-6 mb-6">
+        </app-timer-component>
 
         <div class="row mt-4">
-            <div class="leaderboard-table pt-2">
-              <h2 class="text-white mb-2">Leaderboard</h2>
-              <ol>
-              </ol>
-            </div>
+            <app-leaderboard [teams]="teams">
+            </app-leaderboard>
         </div>
         
-
-        <div class="loader initial">
-          <div class="spinner">
-            <div class="spinner-circle"></div>
-            <div class="spinner-circle"></div>
-          </div>
-        </div>
+        <app-loader [loading]="loading"></app-loader>
 
       </div>
     </div>

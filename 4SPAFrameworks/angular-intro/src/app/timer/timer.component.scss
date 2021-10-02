@@ -1,0 +1,26 @@
+.clock {
+  background: #0f3854;
+  background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+  background-size: 100%;
+
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+  color: #daf6ff;
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+
+  &-time{
+      letter-spacing: 0.05em;
+      font-size: 80px;
+      line-height: 80px;
+  }
+  &-date {
+      letter-spacing: 0.1em;
+      font-size: 24px;
+      line-height: 24px;
+  }
+  &-text {
+      letter-spacing: 0.1em;
+      font-size: 18px;
+      line-height: 18px;
+  }
+}

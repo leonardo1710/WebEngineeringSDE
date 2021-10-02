@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Team } from '../services/Team';
 
 @Component({
   selector: 'app-leaderboard',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaderboardComponent implements OnInit {
 
+  @Input() teams: Array<Team>;
   constructor() { }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ export async function getAllTeams() {
   }
   const teams = await response.json();
 
-  //await sleep(5000);  // to simulate a longer request
+  await sleep(5000);  // to simulate a longer request
 
   return teams.message;
 }

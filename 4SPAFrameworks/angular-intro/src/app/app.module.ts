@@ -7,6 +7,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import './styles/leaderboard.scss';
 import Timer from './components/Timer/Timer';
 import Loader from './components/Loader/Loader';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 import React, { useState, useEffect } from 'react';
 import { getAllTeams } from './services/team.service';
 
@@ -11,12 +12,9 @@ function App() {
   const [loading, setLoading] = useState(true); // whether async request is still going on
   const [teams, setTeams] = useState([]); // teams for leaderboard
 
-  const listItems = teams.map((team) =>
-    <li key={team.teamId.toString()}>
-      <mark>{team.team}</mark>
-      <img alt="avatar" src="http://www.rewards1.com/uploads/avatar/203.jpg" />
-    </li>
-  );
+  const [messageText, setMessageText] = useState("");
+
+  
 
   const sortTeams = (list) => {
     list.sort((a, b) => {
@@ -58,12 +56,7 @@ function App() {
 
             <Row className="mt-4">
                 {/** TODO make Component */}
-                <div className="leaderboard-table pt-2">
-                  <h2 className="text-white mb-2">Leaderboard</h2>
-                  <ol>
-                    { listItems }
-                  </ol>
-                </div>
+                <Leaderboard teams={teams}/>
             </Row>
 
             <Loader loading={loading}></Loader>
