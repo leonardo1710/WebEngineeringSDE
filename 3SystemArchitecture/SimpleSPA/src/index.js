@@ -28,9 +28,11 @@ const router = async () => {  //async because contents will be loaded from other
     };
   });
 
+  console.log('location :>> ', location);
 
   let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
 
+  console.log('match :>> ', match);
   /* Route not found - return first route OR a specific "not-found" route */
   if (!match) {
       match = {
@@ -42,6 +44,7 @@ const router = async () => {  //async because contents will be loaded from other
   // create instance of matched view
   const view = new match.route.view();
 
+  console.log('view :>> ', view);
   // append view html to the app element
   document.querySelector("#app").innerHTML = await view.getHtml();
 }
@@ -50,9 +53,10 @@ window.addEventListener("popstate", router);  //re-run router if navigating thro
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", e => {
+    console.log("refresh");
       if (e.target.matches("[data-link]")) {
           e.preventDefault(); // dont refresh page
-          navigateTo(e.target.href); // insteat call navigateTo
+          navigateTo(e.target.href); // instead call navigateTo
       }
   });
 
