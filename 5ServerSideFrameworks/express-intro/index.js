@@ -4,6 +4,9 @@
 const dotenv = require("dotenv");
 const express = require('express');
 const cors = require('cors');
+const { ApolloServer } = require('apollo-server-express')
+
+const db = require('./database/database');
 
 dotenv.config();  // config will read your .env file, parse the contents, assign it to process.env, and return an Object with a parsed key containing the loaded content
 
@@ -14,6 +17,7 @@ class App{
      */
     constructor() {
       this.app = express();
+      this.apolloServer;
 
       //Literal object containing the configurations
       this.configs = {
@@ -41,9 +45,30 @@ class App{
     }
 
     applyEndpoints(){
-      this.app.get("/team/getAll", (req, res) => {
-        return sendResponse(res, 200, teams, true);
+      this.app.get("/authors", (req, res) => {
+         return db.authors.findAll().then(authors => res.json(authors));
       });
+
+      this.app.get("/posts", (req, res) => {
+        return db.posts.findAll().then(authors => res.json(authors));
+      });
+    }
+
+    async applyGraphQLMiddleware(){
+      // create new apollo server and add graphql types and queries
+      this.apolloServer = new ApolloServer({
+        playground: true,
+        modules: [
+          require('./graphql/authors'),
+          require('./graphql/author_posts')
+        ]
+      });
+
+      await this.apolloServer.start();
+
+      const app = this.app;
+      this.apolloServer.applyMiddleware({app});
+
     }
 
     /**
@@ -66,8 +91,10 @@ class App{
 
 //Runs the thing
 const app = new App();
-app.run();
 
+app.ApolloServer;
+app.run();
+app.applyGraphQLMiddleware();
 
 
 let teams = [
