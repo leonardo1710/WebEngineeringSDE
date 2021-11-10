@@ -1,5 +1,5 @@
 
-const db = require('../database/database')
+const db = require('../database');
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -18,7 +18,8 @@ const typeDefs = gql`
 const resolvers = {
     Query: {
         authors: async () => db.authors.findAll(),
-        author: async (obj, args, context, info) => db.authors.findByPk(args.id),
+        author: async (obj, args, context, info) =>
+            db.authors.findByPk(args.id),
     }
 }
 

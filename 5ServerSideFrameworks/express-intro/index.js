@@ -68,7 +68,6 @@ class App{
 
       const app = this.app;
       this.apolloServer.applyMiddleware({app});
-
     }
 
     /**
@@ -95,6 +94,10 @@ const app = new App();
 app.ApolloServer;
 app.run();
 app.applyGraphQLMiddleware();
+
+
+
+
 
 
 let teams = [
