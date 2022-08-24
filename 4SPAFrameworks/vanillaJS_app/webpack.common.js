@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   // 1
@@ -31,7 +30,6 @@ module.exports = {
       title: 'Basic Webpack Setup',
       template: path.resolve(__dirname, './src/index.html'),
     }),
-    new ESLintPlugin(),
   ],
   // 5
   // Integrate Babel in the build process
@@ -42,7 +40,7 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/, // files to exclude
-        use: ['babel-loader'],
+        use: ['babel-loader', 'eslint-loader'],
       },
       // CSS and SASS
       {
@@ -62,7 +60,7 @@ module.exports = {
   },
   resolve: {
     // options for resolving module requests
-    extensions: ['*', '.js', '.ts', '.tsx'], // files to load
+    extensions: ['*', '.js', '.ts'], // files to load
   },
   target: 'web',
 };
