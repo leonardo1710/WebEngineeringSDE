@@ -1,5 +1,8 @@
 {
   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
   "extends": "airbnb",
   "rules": {
     "no-console": "off",   // disable warnings when logging to console
