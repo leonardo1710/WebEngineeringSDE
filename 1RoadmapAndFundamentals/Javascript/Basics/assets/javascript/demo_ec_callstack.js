@@ -28,32 +28,34 @@ function greetUser(){
  * Scope Chain
  * 
  *******/
-    function greetInEnglish(){
-        console.log("Hello " + firstName);  // null/undef
-    }
+function greetInEnglish(){
+    console.log("Hello " + firstName);  
+}
 
-    function greetInSpanish(){
-        console.log("Hola " + firstName);   // null
-    }
+function greetInSpanish(){
+    console.log("Hola " + firstName);   
+}
 
-    var firstName = "John";
-    // this works because firstName was hoisted
-    greetInEnglish();
-    greetInSpanish();
-
+var firstName = "John";
+greetInEnglish();
+greetInSpanish();
 
 
-    function greetInEnglish2(){
-        // name = undefined;
-        console.log("Hello " + name);   // undefined
-        var name ="Polo";
-        greetInSpanish2();
-    }
 
-    function greetInSpanish2(){
-        console.log("Hola " + name); // undefined
-    }
 
-    var name = "Marco";
-    greetInEnglish2();
- 
+
+
+/*
+function greetInEnglish2(){
+    console.log("Hello " + name);  
+    var name ="Polo";
+    greetInSpanish2();
+}
+
+function greetInSpanish2(){
+    console.log("Hola " + name); 
+}
+
+var name = "Marco";
+greetInEnglish2();
+*/
