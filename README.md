@@ -28,7 +28,7 @@ D. Crockford. JavaScript: the good parts. 2008
 A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 
 
-## <a toolchain="toolchain">2. Web Developer Toolchain</a>
+## <a name="toolchain">2. Web Developer Toolchain</a>
 ### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/2WebDeveloperToolchain)
 
 ### Topics
@@ -36,13 +36,13 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Build First Approach in Web Development
 * Frontend Dependency Management
 * Build Tools and CI/CD
-* * Package Managers
-* * Module Bundlers/Loaders
-* * Linters and Formatters
-* * Minification and Obfuscation
-* * SCSS/SASS
-* * Typescript
-* * npm, npm scripts, webpack, babel
+  * Package Managers
+  * Module Bundlers/Loaders
+  * Linters and Formatters
+  * Minification and Obfuscation
+  * SCSS/SASS
+  * Typescript
+  * npm, npm scripts, webpack, babel
 
 ### Tutorials
 * [Web Application Setup with npm and Webpack](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2-Web-Application-Setup-with-npm-and-Webpack) 
@@ -57,7 +57,8 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
     <li><a href="https://webdesign.tutsplus.com/tutorials/a-guide-to-dependency-management-in-front-end-development--cms-33963">Dependency Management Guide</a></li>
 </ul>
 
-## <a toolchain="architectures">3. Testing Web Applications (automated)</a>
+## <a name="testing">3. Testing Web Applications (automated)</a>
+### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/3TestingWebApplications)
 
 ### Topics
 * Testing Landscape
@@ -71,7 +72,7 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Dario Kondratiuk, UI Testing with Puppeteer: Implement End-to-end Testing and Browser Automation Using JavaScript and Node.js, 2021
 * James Padolsey, Clean Code in JavaScript: Develop Reliable, Maintainable, and Robust JavaScript, 2020
 
-## <a toolchain="frameworks">4. Advanced Application Design</a>
+## <a name="architectures">4. Advanced Application Design</a>
 
 ### Topics
 
@@ -91,7 +92,7 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Jacobson, I., Booch, G., Rumbaugh, J., The Unified Software Development Process, Addison-Wesley, 1999
 * [CSR/SSR approaches (Videos)](https://www.youtube.com/channel/UCZmc-euU6NuxQPQx5sgstlA)
 
-## <a toolchain="ux">5. Frameworks and Libraries</a>
+## <a name="frameworks">5. Frameworks and Libraries</a>
 
 ### Topics
 
@@ -100,6 +101,6 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Intro Demos about different Webtechstacks
 * Webserver and CORS
 
-## <a toolchain="trends">6. Selected Topics in Modern Web Development</a>
+## <a name="trends">6. Selected Topics in Modern Web Development</a>
 
 
