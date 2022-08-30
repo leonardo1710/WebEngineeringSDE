@@ -1,3 +1,4 @@
+console.log("#### start demo call stack and hoisting ####");
 
 /**
  * WINDOW - OBJECT
@@ -49,13 +50,32 @@ greetInSpanish();
 function greetInEnglish2(){
     console.log("Hello " + name);  
     var name ="Polo";
+    console.log(this);
     greetInSpanish2();
 }
 
 function greetInSpanish2(){
     console.log("Hola " + name); 
+    console.log(this);
 }
 
 var name = "Marco";
 greetInEnglish2();
 */
+
+/*
+function greetInFrench(){
+    console.log("Bonjour " + name);
+    console.log(this);
+}
+
+const frenchMessage = {
+    name: 'my french message',
+    greetInFrench
+}
+
+frenchMessage.greetInFrench();
+*/
+
+
+console.log("#### end demo call stack and hoisting ####");
