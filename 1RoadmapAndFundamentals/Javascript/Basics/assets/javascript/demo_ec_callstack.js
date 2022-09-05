@@ -46,8 +46,9 @@ greetInSpanish();
 
 
 
-/*
+
 function greetInEnglish2(){
+    // var name = undefined
     console.log("Hello " + name);  
     var name ="Polo";
     console.log(this);
@@ -61,9 +62,9 @@ function greetInSpanish2(){
 
 var name = "Marco";
 greetInEnglish2();
-*/
 
-/*
+
+
 function greetInFrench(){
     console.log("Bonjour " + name);
     console.log(this);
@@ -75,7 +76,7 @@ const frenchMessage = {
 }
 
 frenchMessage.greetInFrench();
-*/
+
 
 
 console.log("#### end demo call stack and hoisting ####");
