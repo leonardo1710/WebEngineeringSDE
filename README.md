@@ -45,7 +45,8 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
   * npm, npm scripts, webpack, babel
 
 ### Tutorials
-* [Web Application Setup with npm and Webpack](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2-Web-Application-Setup-with-npm-and-Webpack) 
+* [Web Application Setup with npm and Webpack](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.1-Web-Application-Setup-with-npm-and-Webpack) 
+* [Web Application Setup with npm and Vite](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.2-Web-Application-Setup-with-npm-and-Vite)
 * [CI/CD Pipeline with Github Pages and Github Actions](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.3-CI-CD-Pipeline-with-Github-Pages-and-Github-Actions-(Tutorial))
 
 ### Literature and Resources
