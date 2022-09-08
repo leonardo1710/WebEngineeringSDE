@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "airbnb",
+  "settings": {
+    // Tells eslint how to resolve imports
+    "import/resolver": {
+      "node": {
+        "paths": ["srx"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
+  "rules": {
+    "arrow-parens": "off",
+    "no-console": "off",   // disable warnings when logging to console
+    "linebreak-style": 0,  // disable LF and CRLF linebreak errors
+    "no-plusplus": "off",   // disable no-plusplus errors
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  }
+}

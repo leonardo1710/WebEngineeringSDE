@@ -1,7 +1,6 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
-import { Stack } from './utils/stack'
+import './style.css';
+import javascriptLogo from './javascript.svg';
+import setupCounter from './counter';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -19,13 +18,6 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
+`;
 
-const stack = new Stack();
-stack.push('x');
-stack.push('y');
-
-document.querySelector('.read-the-docs').textContent = stack.peek;
-setupCounter(document.querySelector('#counter'))
-
-
+setupCounter(document.querySelector('#counter'));
