@@ -6,7 +6,7 @@ const app = express();
 const port = 3001;
 
 // For each request, provide wildcard Access-Control-* headers via OPTIONS call
-app.use(cors()); 
+// app.use(cors({ origin: '*'})); 
 // For each request, parse request body into a JavaScript object where header Content-Type is application/json
 app.use(express.json());
 app.use(express.urlencoded({
@@ -18,6 +18,10 @@ app.listen(port, () => console.log(`Express server running on port ${port}`));
 app.get("/team/getAll", (req, res) => {
   return sendResponse(res, 200, teams, true);
 });
+
+app.put("/hello", (req, res) => {
+  return sendResponse(res, 200, "put works!", true);
+})
 
 let teams = [
   {

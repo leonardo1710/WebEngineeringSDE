@@ -14,8 +14,6 @@ function App() {
 
   const [messageText, setMessageText] = useState("");
 
-  
-
   const sortTeams = (list) => {
     list.sort((a, b) => {
       return a.progress - b.progress;
