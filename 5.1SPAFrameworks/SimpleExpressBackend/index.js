@@ -7,6 +7,11 @@ const port = 3001;
 
 // For each request, provide wildcard Access-Control-* headers via OPTIONS call
 // app.use(cors({ origin: '*'})); 
+
+app.use(cors({
+  origin: "http://localhost:8080",
+  methods: ['GET', 'POST']
+}))
 // For each request, parse request body into a JavaScript object where header Content-Type is application/json
 app.use(express.json());
 app.use(express.urlencoded({

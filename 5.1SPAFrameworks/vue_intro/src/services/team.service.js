@@ -1,7 +1,7 @@
 import { getApiEndpoint } from '@/config/config';
 
 export async function getAllTeams() {
-  
+  /*
   const response = await fetch(`${getApiEndpoint()}team/getAll`);
 
   if (!response.ok) {
@@ -11,7 +11,7 @@ export async function getAllTeams() {
   const teams = await response.json();
   return teams.message;
   
-  /*
+  */
   const response = await fetch(`${getApiEndpoint()}hello`, {
     method: 'PUT'
   });
@@ -23,5 +23,5 @@ export async function getAllTeams() {
 
   const data = await response.json();
   console.log('data :>> ', data);
-  */
+
 }

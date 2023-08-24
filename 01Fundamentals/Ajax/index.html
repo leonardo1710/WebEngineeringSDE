@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ajax and DOM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="main.js" async defer></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>AJAX and DOM</li>
+    </ul>
+</nav>
+
+<main>
+    <h1 class="grid-row">Ajax and DOM with JS</h1>
+
+    <div class="grid-row">
+        <div class="grid-col">
+            <button class="btn-primary" onclick="app.getDogs();">Send Ajax Request</button>
+        </div>
+        <div class="grid-col"></div>
+    </div>
+
+    <div class="grid-col-4">
+        <h1>List of Objects</h1>
+    </div>
+    <div class="grid-col-4"></div>
+
+    <div class="grid-col-4">
+        <h1>Wishlist</h1>
+    </div>
+
+    <div class="grid-col-4">
+        <ul class="listgroup" id="item-list">
+            <!-- List gets appended with JS -->
+        </ul>
+    </div>
+
+    <div class="grid-col-4"></div>
+
+    <div class="grid-col-4">
+        <ul class="listgroup" id="wishlist">
+            <!-- List gets appended with JS -->
+        </ul>
+    </div>
+</main>
+
+
+
+</body>
+</html>
