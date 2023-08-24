@@ -2,33 +2,32 @@
 This repository provides demo applications and course material presented in the course of Web Engineering in the master study program Software Design and Engineering at FH Campus Wien.
 
 ## Overview
-1. [Roadmap, Fundamentals and Advanced Javascript](#fundamentals)
-2. [Web Developer Toolchain](#toolchain)
-3. [Testing Web Applications (automated)](#testing)
-4. [Advanced Application Design](#architectures)
-5. [Frameworks and Libraries](#frameworks)
+1. [Fundamentals and Advanced Javascript](#fundamentals)
+2. [Buildmanagement, CI/CD and Typescript](#toolchain)
+3. [Testing Web Applications](#testing)
+4. [Advanced Application Design and Frontend Frameworks](#architectures)
+5. [Webserver and Backend Development](#frameworks)
 6. [Selected Topics in Modern Web Development](#trends)
 
 
-## <a name="fundamentals">1. Roadmap, Fundamentals and Advanced Javascript</a>
-### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/1RoadmapAndFundamentals)
+## <a name="fundamentals">1. Fundamentals and Advanced Javascript</a>
+### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/01Fundamentals)
 
 ### Topics
-* [Web Developer Roadmap 2022](https://github.com/kamranahmedse/developer-roadmap)
-* Advanced Javascript Concepts (Modules, Execution Context, Scope Chain, Hoisting, Asynchronous Operations, ...)
-* Clean Coding Principles
+* [Frontend Developer Roadmap 2023](https://roadmap.sh/frontend)
+* [Backend Developer Roadmap 2023](https://roadmap.sh/backend)
+* Scope, Execution Context, Hoisting and Event Loop 
+* Asynchronous Programming (Callback Hell, Async/Await and Promises)
+* Prototype System, JS Classes, Arrow Functions and Modules
 
 ### Literature:
-James Padolsey, Clean Code in JavaScript: Develop Reliable, Maintainable, and Robust JavaScript, 2020
-
-Kyle Simpson, „You don‘t know JS yet – Get started“, Frontend Masters, 2020
-
-D. Crockford. JavaScript: the good parts. 2008
-
-A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
+* James Padolsey, Clean Code in JavaScript: Develop Reliable, Maintainable, and Robust JavaScript, 2020
+* Kyle Simpson, „You don‘t know JS yet – Get started“, Frontend Masters, 2020
+* D. Crockford. JavaScript: the good parts. 2008
+* A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 
 
-## <a name="toolchain">2. Web Developer Toolchain</a>
+## <a name="toolchain">2. Buildmanagement, CI/CD and Typescript</a>
 ### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/2WebDeveloperToolchain)
 
 ### Topics
@@ -66,6 +65,7 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Writing Clean Tests
 * Test Automation with CI/CD
 * E2E Testing
+* Test Automation with CI/CD
 
 ### Literature and Resources
 
@@ -73,35 +73,33 @@ A. Osmani, Learning JavaScript Design Patterns. O'Reilly Media, 2012
 * Dario Kondratiuk, UI Testing with Puppeteer: Implement End-to-end Testing and Browser Automation Using JavaScript and Node.js, 2021
 * James Padolsey, Clean Code in JavaScript: Develop Reliable, Maintainable, and Robust JavaScript, 2020
 
-## <a name="architectures">4. Advanced Application Design</a>
+## <a name="architectures">4. Advanced Application Design and Frontend Frameworks</a>
 
 ### Topics
 
-* Fundamentals of Systemdesign
-* System Architectures
-* Layered Architectures (3-tier, n-tier)
-* Recap Microservices and FaaS
-* MVC, MVVM and MVP
-* Single Page Applications vs. Multi Page Applications
-* Client and Server-side Rendering Technologies
+* Multipage and Singlepage Applications 
+* Rendering Technologies (SSR, CSR, static SSR and Rehydration)
+* Frontend Frameworks
 
-### Literature and Resources
+### Resources
 
-* Nicolas Bevacqua, JavaScript Application Design: A Build First Approach, 2015
-* James Padolsey, Clean Code in JavaScript: Develop Reliable, Maintainable, and Robust JavaScript, 2020
-* Kappel et. al., „Web Engineering – The Discipline of Systematic Development of Web Applications, John Wiley & Sons, Ltd, 2006
-* Jacobson, I., Booch, G., Rumbaugh, J., The Unified Software Development Process, Addison-Wesley, 1999
 * [CSR/SSR approaches (Videos)](https://www.youtube.com/channel/UCZmc-euU6NuxQPQx5sgstlA)
 
-## <a name="frameworks">5. Frameworks and Libraries</a>
+## <a name="frameworks">5. Webserver and Backend Development</a>
 
 ### Topics
 
-* Single Page Application Frameworks: React, Angular, Vue.js and Svelte.js
-* Serverside Application Frameworks: Node.js, Laravel, Spring Boot
-* Intro Demos about different Webtechstacks
-* Webserver and CORS
+* Webserver 
+* Authentication Strategies 
+* CORS 
+* GraphQL, gRPC and REST
 
 ## <a name="trends">6. Selected Topics in Modern Web Development</a>
 
+### Topics
+* Progressive Web Applications and Browser APIs 
+  * Server Sent Events, Websockets and Services Workers 
+* Webassembly 
+* Microfrontends 
+* Web Components
 
