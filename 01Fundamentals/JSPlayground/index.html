@@ -7,43 +7,29 @@
     <title>JS Playground</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-
     <script src="main.js" type="module"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li>Web Playground</li>
-    </ul>
-</nav>
+  <nav>
+      <ul>
+          <li>JavaScript Playground</li>
+      </ul>
+  </nav>
 
-<main>
+  <main>
     <div class="row">
+      <button onclick="app.getAllBreeds();">Refresh</button>
+    </div>
+
+    <div class="row center">
         <div class="col" id="all">
-            <h1>Items</h1>
+            <h1>All Dogs</h1>
             <!-- Render loaded items here -->
-            <ul>
-                <li>Example Item 1</li>
-                <li>Example Item 2</li>
-            </ul>
-        </div>
-    
-        
-        <div class="col" id="whishlist">
-            <h1>Whishlist</h1>
-            <!-- Render whishlist items here -->
-            <ul>
-                <li>Example Item 1</li>
-                <li>Example Item 2</li>
-            </ul>
         </div>
     </div>
-    
-</main>
-
-
-
+      
+  </main>
 </body>
 </html>
