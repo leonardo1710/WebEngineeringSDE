@@ -66,7 +66,8 @@ This repository provides demo applications and course material presented in the 
 ### Tutorials
 * [Tutorial: Testing Web Applications](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.1-Testing-Web-Applications)
 * [Tutorial: CICD Pipeline with Github Actions and Github Pages](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.2-CI-CD-Pipeline-with-Github-Pages-and-Github-Actions) 
-* 
+
+
 ### Literature and Resources
 
 * Lucas da Costa, Testing JavaScript Applications, 2021
