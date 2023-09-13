@@ -1,9 +1,0 @@
-{
-  "parser": "@babel/eslint-parser",
-  "extends": "airbnb",
-  "rules": {
-    "no-console": "off",   // disable warnings when logging to console
-    "linebreak-style": 0,  // disable LF and CRLF linebreak errors
-    "no-plusplus": "off"   // disable no-plusplus errors
-  }
-}

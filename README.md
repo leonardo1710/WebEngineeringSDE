@@ -28,8 +28,6 @@ This repository provides demo applications and course material presented in the 
 
 
 ## <a name="toolchain">2. Buildmanagement, CI/CD and Typescript</a>
-### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/2WebDeveloperToolchain)
-
 ### Topics
 
 * Build First Approach in Web Development
@@ -44,9 +42,9 @@ This repository provides demo applications and course material presented in the 
   * npm, npm scripts, webpack, babel
 
 ### Tutorials
-* [Web Application Setup with npm and Webpack](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.1-Web-Application-Setup-with-npm-and-Webpack) 
-* [Web Application Setup with npm and Vite](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.2-Web-Application-Setup-with-npm-and-Vite)
-* [CI/CD Pipeline with Github Pages and Github Actions](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.3-CI-CD-Pipeline-with-Github-Pages-and-Github-Actions-(Tutorial))
+* [Tutorial: Package Management, Build Management and Modules](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2-Package-Management,-Build-Management-and-Modules)
+* [Tutorial: Web Application Setup with Vite](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.1-Vite-Web-Application-Setup) 
+* [Tutorial: Web Application Setup with Webpack](https://github.com/leonardo1710/WebEngineeringSDE/wiki/2.2-Webpack-Web-Application-Setup)
 
 ### Literature and Resources
 <ul>
@@ -58,8 +56,6 @@ This repository provides demo applications and course material presented in the 
 </ul>
 
 ## <a name="testing">3. Testing Web Applications (automated)</a>
-### [Go to Repository](https://github.com/leonardo1710/WebEngineeringSDE/tree/main/3TestingWebApplications)
-
 ### Topics
 * Testing Landscape
 * Writing Clean Tests
@@ -67,6 +63,10 @@ This repository provides demo applications and course material presented in the 
 * E2E Testing
 * Test Automation with CI/CD
 
+### Tutorials
+* [Tutorial: Testing Web Applications](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.1-Testing-Web-Applications)
+* [Tutorial: CICD Pipeline with Github Actions and Github Pages](https://github.com/leonardo1710/WebEngineeringSDE/wiki/3.2-CI-CD-Pipeline-with-Github-Pages-and-Github-Actions) 
+* 
 ### Literature and Resources
 
 * Lucas da Costa, Testing JavaScript Applications, 2021
