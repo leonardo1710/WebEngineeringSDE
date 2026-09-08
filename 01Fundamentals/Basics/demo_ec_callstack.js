@@ -5,46 +5,54 @@ console.log("#### start demo call stack and hoisting ####");
  * everything defined in global context
  * is attached to the window object
  */
-console.log(window);
+
+/* console.log('window :>> ', window);
 
 //global variables
-var globalVar = "Jane";
+var myName = "Jane";
 
 //calling global functions
 window.greetUser();
 greetUser();
 
 function greetUser(){
-    var globalVar = "John";
-    console.log(`Hello ${globalVar}`);
-    console.log(globalVar);         // John
-    console.log(window.globalVar);  // Jane
-}
+    var myName = "John";
+    console.log(`Hello ${myName}`);
+    console.log(myName);         // John
+    console.log(window.myName);  // Jane
+} */
 
 
-var myVar = "A";
+//console.log('global :>> ', global);
 
-var aFunction = (() => {
+/*******
+ * 1. HOISTING example
+ * 
+ *******/
+
+/* var myVar = "A";
+
+var aFunction = (() => {    // IIFE - Immediately Invoked Function Expression
     var myVar = "B";
 
     return () => {
         console.log(`myVar: ${myVar}`); 
+        console.log('this in aFunction :>> ', this);
     }
 })();
 
-aFunction();
+aFunction(); */
+
 
 
 
 
 /*******
- * Hoisting
- * Code Execution
- * Call stack
- * Scope Chain
+ * 2. HOISTING example
  * 
  *******/
-function greetInEnglish(){
+
+/* function greetInEnglish(){
     console.log("Hello " + firstName);  
 }
 
@@ -52,46 +60,47 @@ function greetInSpanish(){
     console.log("Hola " + firstName);   
 }
 
-var firstName = "John";
+let firstName = "John";
 greetInEnglish();
-greetInSpanish();
+greetInSpanish(); */
 
 
 
 
+/*******
+ * 3. HOISTING example
+ * 
+ *******/
 
-
-
-function greetInEnglish2(){
-    // var name = undefined
+/* function greetInEnglish2(){
     console.log("Hello " + name);  
-    var name ="Polo";
-    console.log(this);
+    name ="Polo";
+    //console.log(this);
     greetInSpanish2();
 }
 
 function greetInSpanish2(){
     console.log("Hola " + name); 
-    console.log(this);
+    //console.log(this);
 }
 
 var name = "Marco";
-greetInEnglish2();
+greetInEnglish2(); */
 
 
-
-function greetInFrench(){
-    console.log("Bonjour " + name);
-    console.log(this);
+/******
+ * THIS / FEC example
+ * this inside a function exposes its
+ * current execution context
+ * *****/
+/* function greetInFrench(){
+    console.log("Bonjour " + this.name);
+    console.log('this in greetInFrench :>> ', this);
 }
 
 const frenchMessage = {
-    name: 'my french message',
+    name: 'Amélie',
     greetInFrench
 }
 
-frenchMessage.greetInFrench();
-
-
-
-console.log("#### end demo call stack and hoisting ####");
+frenchMessage.greetInFrench(); */

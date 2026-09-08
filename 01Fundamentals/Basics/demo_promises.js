@@ -65,7 +65,9 @@ getPost(2, (error, post) => {
 // Create a Promise 
 // The Promise constructor takes a function as an argument and that function internally receives resolve and reject as parameters.
 // When we create a promise, it’s in a pending state. When we call the resolve function, it goes in a fulfilled state, and if we call reject it will go into the rejected state.
-const promise = new Promise((resolve, reject) => {
+
+
+/* const promise = new Promise((resolve, reject) => {
     setTimeout(function() {
         const sum = 4 + 5 ;//+ 'a';
         if(isNaN(sum)) {
@@ -80,7 +82,7 @@ promise.then(result => {
     console.log(`The promise result is: ${result}`); // 9
 }).catch( error => {
     console.log(error);
-});
+}); */
 
 
 /** What is PROMISE CHAINING and Why is it Useful? 
@@ -91,7 +93,7 @@ promise.then(result => {
  * If any of the in-between promises fail, the last .catch handler will be automatically executed.
 */
 
-promise.then(result => {
+/* promise.then(result => {
     console.log('first .then handler');
     return result;
 }).then(result => {
@@ -99,26 +101,28 @@ promise.then(result => {
     console.log(result);
 }).catch(error => {
     console.log(error);
-});
+}); */
+
+
+
 
 /** How to Use Async/Await in JavaScript
  * 
  * Async/await gives developers a better way to use promises.
  */
 
-// To use async/await, you need to create a function and add the async keyword before the function name using ES5 function declaration syntax
+/* // To use async/await, you need to create a function and add the async keyword before the function name using ES5 function declaration syntax
 const sayHello = async () => {
     return 'Hello';
 };
   
-sayHello(); // returns a Promise
+console.log("sayHello() >> ", sayHello()); // returns a Promise
 // to get the actual string:
 sayHello().then( result => {
     console.log(result);
 })
 
 // The sayHello() function from above is the same as:
-
 const sayHello2 = function() {
     return new Promise((resolve, reject) => {
         resolve('Hello');
@@ -126,10 +130,9 @@ const sayHello2 = function() {
 }
 
 // As well as:
-
 const sayHello3 = function () {
     return Promise.resolve('Hello');
-};
+}; */
 
 
 /** Resolve Callback Hell example from before with async/await and promises
@@ -178,58 +181,3 @@ const printResults = async () => {
 
 printResults();
 
-
-/*
-
-var myPromise = new Promise(function(resolve, reject) {
-    // do a thing, possibly async, then…
-    let x = false;
-    if (x) { // everything turned out fine
-        // timeout to simulate async
-        setTimeout(() => resolve("it worked"), 1000);
-    } else {
-        setTimeout(() => reject(new Error("Whoops!")), 1000);
-    }
-});
-
-myPromise.then(
-    result => console.log(result)
-).catch(
-    error => console.log(error)
-);
-
-
-// Chaining of promises
-var myPromise2 = new Promise(function(resolve, reject) {
-    let x = true;
-    if (x) {
-        setTimeout(() => resolve(3), 1000);
-    } else {
-        setTimeout(() => reject(new Error("Whoops!")), 1000);
-    }
-});
-
-myPromise2.then(function(result){ 
-    console.log("First: " + result);
-    return result * 3
-}).then(function(result){
-    console.log("Second: " + result);
-}).catch(function(error){
-    console.log(error);
-});
-
-
-// Async Await
-async function f() {
-    try {
-      let response = await myPromise2;  // wait here until myPromise2 has settled
-      console.log('response :>> ', response);
-    } catch(err) {
-      console.error(err);
-    }
-}
-  
-f();
-
-
-*/
